@@ -1,0 +1,67 @@
+﻿body {
+}
+
+
+#headerWrapper {
+    background-color: #808080;
+}
+
+header h1 {
+    color: white;
+}
+
+#navWrapper {
+    background-color: #333;
+}
+
+nav {
+    color: white;
+}
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        nav ul li {
+            list-style-type: none;
+            float: left;
+            margin-right: 2%;
+            height: 3vh;
+        }
+
+            nav ul li a {
+                text-decoration: none !important;
+                color: white;
+                line-height: 3vh;
+            }
+
+#contentWrapper {
+    background-color: #ffffff;
+}
+
+/* Gallery */
+
+#captionHolder {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+}
+
+#caption {
+    font-size: 2.5vw;
+    display: block;
+    position: relative;
+    color: white;
+    z-index: 9999;
+    left: -50%;
+    top: -75%;
+    text-align: center;
+}
+
+#footerWrapper {
+    background-color: #808080;
+}
+
+footer {
+}

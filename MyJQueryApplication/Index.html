@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My JQuery Application</title>
+    <meta charset="utf-8" />
+    <link href="Content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid" id="headerWrapper">
+        <div class="container">
+            <header>
+                <h1>
+                    Gallery Site! JQuery Edition
+                </h1>
+            </header>
+        </div>
+    </div>
+    <div class="container-fluid" id="navWrapper">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid" id="contentWrapper">
+        <div class="container">
+            <section>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="Content/Gallery/img1.jpg" alt="House on Water" class="img-responsive" id="galleryBig" />
+                            <div id="captionHolder">
+                                <p id="caption">House on Water</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="Content/Gallery/img1.jpg" alt="House on Water" class="img-responsive galleryItem" />
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="Content/Gallery/img2.jpg" alt="Man in Boat" class="img-responsive galleryItem" />
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="Content/Gallery/img3.jpg" alt="Happy Sloth" class="img-responsive galleryItem" />
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="Content/Gallery/img4.jpg" alt="Bridge in Water" class="img-responsive galleryItem" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="container-fluid" id="footerWrapper">
+        <div class="container">
+            <footer>
+                &copy; 2016 - Daniel Dollerup
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/Bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        // JQuery finds all elements of class galleryItem
+        // For each galleryItem, we add a click function, that runs an anonymous
+        // function
+        $(".galleryItem").click(function () {
+            // When an image is clicked (where 'this' is the picture we click)
+            // we save the image path to the variable 'image'
+            var image = $(this).attr("src");
+
+            // We also find the alt attibute of the image, to be used as caption text for our big image.
+            var caption = $(this).attr("alt");
+
+            // we then find the big gallery img tag, and set the src attribute
+            // as the src attribute of the picture we just clicked
+            $("#galleryBig").attr("src", image);
+
+            // In the end, we set the caption text, as the alt attribute of clicked image.
+            $("#caption").text(caption);
+        });
+    </script>
+</body>
+</html>
