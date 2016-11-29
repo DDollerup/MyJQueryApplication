@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <link href="Content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <button onclick="PreviousImage()">
+        Prev
+    </button>
+    <button onclick="NextImage()">
+        Next
+    </button>
+
+
+    <img id="result" src="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/Bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+
+        var images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+        var counter = 0;
+
+        ShowImage(counter);
+
+        function NextImage() {
+            counter += 1;
+            if (counter >= images.length) {
+                counter = 0;
+            }
+            ShowImage(counter);
+        }
+
+        function PreviousImage() {
+            counter -= 1;
+            if (counter < 0) {
+                counter = images.length - 1;
+            }
+            ShowImage(counter);
+        }
+
+        function ShowImage(counter) {
+            var path = "Content/Gallery/";
+            var fullPath = path + images[counter];
+
+            $("#result").attr("src", fullPath);
+        }
+
+
+    </script>
+</body>
+</html>

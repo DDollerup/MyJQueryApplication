@@ -83,6 +83,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Arrays.html" />
+    <Content Include="Content\Gallery\img5.jpg" />
     <Content Include="Content\Bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\Bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\Bootstrap\css\bootstrap.css" />
