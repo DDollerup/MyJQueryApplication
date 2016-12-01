@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My JQuery Application</title>
+    <meta charset="utf-8" />
+    <link href="Content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bxSlider/jquery.bxslider.css" rel="stylesheet" />
+    <link href="Content/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid" id="headerWrapper">
+        <div class="container">
+            <header>
+                <h1>
+                    Gallery Site! JQuery Edition
+                </h1>
+            </header>
+        </div>
+    </div>
+    <div class="container-fluid" id="navWrapper">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid" id="contentWrapper">
+        <div class="container">
+            <section>
+                <ul class="bxslider">
+                    <li>
+                        <img src="Content/Gallery/img1.jpg" />
+                    </li>
+                    <li>
+                        <img src="Content/Gallery/img2.jpg" />
+                    </li>
+                    <li>
+                        <img src="Content/Gallery/img3.jpg" />
+                    </li>
+                    <li>
+                        <img src="Content/Gallery/img4.jpg" />
+                    </li>
+                    <li>
+                        <img src="Content/Gallery/img5.jpg" />
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="container-fluid" id="footerWrapper">
+        <div class="container">
+            <footer>
+                &copy; 2016 - Daniel Dollerup
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="Content/bxSlider/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".bxslider").bxSlider({});
+        });
+    </script>
+
+</body>
+</html>
